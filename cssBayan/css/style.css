@@ -1,0 +1,159 @@
+*,
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: fff;
+    padding: 4%;
+    margin: 0 auto;
+}
+
+.bayan {
+    background-color: rgb(226, 217, 130);
+    padding: 3%
+}
+
+.title {
+    font-weight: bold;
+    font-size: 7vw;
+    margin-bottom: 5%;
+}
+
+.list__option {
+    border-bottom: 0.1em blue solid;
+    padding-bottom: 1%;
+}
+
+.list__option:first-child {
+    border-top: 0.1em blue solid;
+}
+
+.list__option-tab {
+    appearance: none;
+    height: 0;
+    width: 0;
+}
+
+.list__option-tab:checked~.list__option-content {
+    opacity: 1;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.list__option-tab:checked~.list__option-title {
+    color: black;
+}
+
+.list__option-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.list__option-title {
+    font-size: 4vw;
+    font-weight: bold;
+    color: blue;
+    transition: 0.5s;
+}
+
+.fa-xmark {
+    visibility: hidden;
+}
+
+.list__option-content {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+@media screen and (min-width: 800px) {
+    .wrapper {
+        max-width: 80%;
+    }
+
+    .list__option-tab:checked~.list__option-title>.fa-stack .fa-plus {
+        visibility: hidden;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .list:hover .list__option-tab:checked~.list__option-title>.fa-stack .fa-xmark {
+        visibility: visible;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        max-width: 60%;
+        padding: 3%
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 2vw;
+        margin-bottom: 5%;
+    }
+
+    .list__option-title:hover~.list__option-content {
+        opacity: 1;
+        height: 100%;
+        overflow: hidden;
+        transition: opacity 1s ease;
+    }
+
+    .list__option-title:hover {
+        color: black;
+        transition: 0.5s;
+    }
+
+    .list:hover .list__option-title>.fa-stack {
+        visibility: visible;
+    }
+
+    .list:hover .list__option-title {
+        color: black;
+    }
+
+    .list__option-tab:hover~.list__option-title>.fa-stack .fa-plus {
+        visibility: hidden;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .list__option-tab:hover~.list__option-title>.fa-stack .fa-xmark {
+        visibility: visible;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .list__option-title {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: blue;
+        transition: 0.5s;
+    }
+
+    .fa-stack {
+        visibility: hidden;
+    }
+}
