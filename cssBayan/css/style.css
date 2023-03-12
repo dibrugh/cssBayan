@@ -1,0 +1,86 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F8FF;
+    padding: 5%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.wrapper {
+    box-sizing: inherit;
+    background-color: #d6d3aa;
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 5vh 10vh;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.list {
+    padding: 1em 0;
+    overflow: hidden;
+}
+
+label {
+    display: block;
+}
+
+.list__option {
+    border-bottom: #F0F8FF 0.1em solid;
+    padding: 0 0 1em 0;
+}
+
+.list__option:first-child {
+    border-top: #F0F8FF 0.1em solid;
+}
+
+.list__option-title {
+    font-weight: bold;
+    justify-content: space-between;
+    cursor: pointer;
+    color: blue;
+}
+
+.list__option-tab:checked ~ .list__option-title {
+    color: black;
+}
+
+.list__option-tab {
+    appearance: none;
+    width: 0;
+    height: 0;
+}
+
+.list__option-tab:checked ~ .list__option-content {
+    visibility: visible;
+    max-height: 100%;
+    transition:all 1.2s linear;
+}
+
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+.list__option-content {
+    text-align: center; 
+    padding: 2%;
+    visibility: hidden;
+    max-height: 0;
+}
